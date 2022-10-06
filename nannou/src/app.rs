@@ -53,7 +53,7 @@ enum View<Model = ()> {
     /// A view function allows for viewing the user's model.
     WithModel(ViewFn<Model>),
     /// A **Simple** view function does not require a user **Model**. Simpler to get started.
-    Sketch(&dyn Fn(&App, Frame)),
+    Sketch(Fn(&App, Frame)),
 }
 
 /// A nannou `App` builder.
